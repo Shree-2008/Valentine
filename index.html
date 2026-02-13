@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Walk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-frame">
+    <canvas id="game" width="960" height="540" aria-label="Garden Walk"></canvas>
+
+    <div id="start-screen" class="overlay visible">
+      <div class="panel">
+        <h1>Garden Walk</h1>
+        <p>Collect the floating hearts and share a little love.</p>
+        <button id="start-button" class="pixel-button">Start Game</button>
+        <p class="hint">Move with WASD or Arrow Keys.</p>
+      </div>
+    </div>
+
+    <div id="end-screen" class="overlay">
+      <div class="panel">
+        <!-- Minimize button inside the score panel -->
+        <button id="end-minimize-btn" class="panel-btn hidden" title="Minimize">✕</button>
+        <h2>Final Score: <span id="final-score">0</span></h2>
+        <p class="big-message">Will you be my Valentine, Arka Banerjee?</p>
+        <div class="button-row">
+          <button id="yes-button" class="pixel-button yes">✅ YES</button>
+          <button id="no-button" class="pixel-button no">❌ NO</button>
+        </div>
+        <p id="end-message" class="end-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Restore button (appears after score panel is minimized) -->
+  <button id="restore-btn" class="window-btn hidden" title="Restore">Restore</button>
+
+  <script src="game.js"></script>
+</body>
+</html>
